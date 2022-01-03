@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/auth-style.css">
+    <title>LockRPG | Login</title>
+</head>
+<body>
+    <nav class="bar">
+        <label>LockRPG | Registro</label>
+    </nav>
+    <form action="/register" method="post">
+        <h2>Registro</h2>
+        <input required type="text" name="username" id="username" placeholder="Username" autocomplete="off">
+        <input required type="text" name="email" id="email" placeholder="Seu Email" autocomplete="off">
+        <input required type="password" name="password" id="password" placeholder="Senha" autocomplete="off">
+        <input required type="password" name="repassword" id="repassword" placeholder="Confirmar Senha" autocomplete="off">
+        <button type="submit">Registrar-se</button>
+        <p>Já tem uma conta? <a href="/login">Clique aqui</a> para fazer login</p>
+    </form>
+</body>
+</html>

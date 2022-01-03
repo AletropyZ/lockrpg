@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Lock - Index</title>
+</head>
+<body>
+    <nav class="bar">
+        <label>Lock RPG</label>
+        <ul>
+            <li><a href="#" id="selected">Home</a></li>
+            <li><a href="/inventario">Inventário</a></li>
+            <li><a href="/pericias">Perícias</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <img class="profile_picture" src="./test.jpg">
+    <div class="container">
+        <div class="info">
+            <p onclick="editInfo(3)" id="nameDisplay">Nome: Nome Sobrenome</p>
+            <p onclick="editInfo(4)" id="ageDisplay">Idade: 0</p>
+            <p onclick="editInfo(5)" id="heightDisplay">Altura 0,0m</p>
+            <p onclick="editInfo(6)" id="raceDisplay">Raça: Raça</p>
+        </div>
+        <div class="player_info">
+            <p onclick="editInfo(1)" id="lifeDisplay">Vida: 0/0</p>
+            <p onclick="editInfo(2)" id="chaosDisplay">Chaos: 0/0</p>
+        </div>
+        <div class="main_per">
+            <p id="strength" onclick="addPer(0)">Força: 0</p><p id="agility" onclick="addPer(1)">Agilidade: 0</p>
+            <p id="presence" onclick="addPer(2)">Presença: 0</p><p id="inteligence" onclick="addPer(3)">Inteligência: 0</p>
+            <label id="re_points">Pontos: 5</label>
+        </div>
+    </div>
+    <div class="edit_box" id="edit_box">
+        <h2 id="edit_box_title">Name</h2>
+        <label>Atual: </label><input id="edit_atual" min=1 value="0" type="number" placeholder="Valor">
+        <label>Máximo: </label><input id="edit_max" min=1 value="0" type="number" placeholder="Valor">
+        <button type="submit" onclick="applyEdit(currentEditInfo)">Aplicar</button>
+    </div>
+    <div class="edit_box" id="edit_box1">
+        <h2 id="edit_box1_title">Name</h2>
+        <label>Valor: </label><input id="edit1" type="text" placeholder="Valor" autocomplete="off">
+        <button type="submit" onclick="applyEdit(currentEditInfo)">Aplicar</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
